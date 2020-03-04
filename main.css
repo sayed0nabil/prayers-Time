@@ -1,0 +1,71 @@
+.center{
+    text-align: center;
+}
+
+
+.clock{
+  text-align: center;
+  font-size: 30px;
+}
+.clock > P{
+  width: 50%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px solid orange;
+  position: relative;
+  background: #d2d2d2;
+}
+.clock > p::before{
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  width: 300px;
+  height: 1px;
+  background: orange;
+}
+.clock > p::after{
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -300px;
+  width: 300px;
+  height: 1px;
+  background: orange;
+}
+.times{
+  font-size: 20px;
+  font-weight: bold;
+  direction: rtl;
+}
+
+
+#loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #loading span {
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-top: 5px solid transparent;
+    border-right: 4px double blue;
+    border-left: 4px double blue;
+    border-bottom: 5px solid transparent;
+    animation: libot 1s linear infinite;
+  }
+  
+  @keyframes libot{
+    form {
+      transform: rotate(0deg);
+    } 50% {
+      transform: rotate(50deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
