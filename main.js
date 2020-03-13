@@ -8,7 +8,7 @@ let d = new Date();
 let day = d.getDate() - 1, month = d.getMonth() + 1, year = d.getFullYear();
 console.log(day, month, year);
 request.open('GET',
- `http://api.aladhan.com/v1/calendar?latitude=30.044281&longitude=31.340002&method=5&month=${month}&year=${year}`,
+ `https://api.aladhan.com/v1/calendar?latitude=30.044281&longitude=31.340002&method=5&month=${month}&year=${year}`,
   true);
 request.onload = function () {
     document.getElementById('loading').style.display = 'none';
