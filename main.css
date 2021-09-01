@@ -2,6 +2,19 @@
     text-align: center;
 }
 
+body{
+  color: #db8f4e;
+  background: url("./tom-barrett-hgGplX3PFBg-unsplash.jpg");
+  background-size: 100% 100%;
+}
+
+table, th, td {
+  border: 2px double #db8f4e;
+  border-collapse: collapse;
+  padding: 5px;
+  margin: 50px auto;
+  background: #011f2c;
+}
 
 .clock{
   text-align: center;
@@ -14,7 +27,7 @@
   border-radius: 10px;
   border: 1px solid orange;
   position: relative;
-  background: #d2d2d2;
+  background: black;
 }
 .clock > p::before{
   content: "";

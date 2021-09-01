@@ -40,24 +40,24 @@ request.onload = function () {
     let prayer, hDiff, mDiff, sDiff,prayerH, prayerM, fajr = false;
     if((hour > FajrH && hour < DhuhrH) || (hour === FajrH && minute >= FajrM) || ( hour === DhuhrH && minute < DhuhrM)){
         prayerH = DhuhrH, prayerM = DhuhrM;
-        prayer = `الظهر ${DhuhrM} : ${DhuhrH}`;
+        prayer = `الظهر ${Dhuhr.substring(0, Dhuhr.indexOf('('))}`;
     }
         
     else if((hour > DhuhrH && hour < AsrH) || (hour === DhuhrH && minute >= DhuhrM) || ( hour === AsrH && minute < AsrM)){
         prayerH = AsrH, prayerM = AsrM;
-        prayer = `العصر ${AsrM} : ${AsrH}`;
+        prayer = `العصر ${Asr.substring(0, Asr.indexOf('('))}`;
     }
     else if((hour > AsrH && hour < MaghribH) || (hour === AsrH && minute >= AsrM) || ( hour === MaghribH && minute < MaghribM)){
         prayerH = MaghribH, prayerM = MaghribM;
-        prayer = `المغرب ${MaghribM} : ${MaghribH}`;
+        prayer = `المغرب ${Maghrib.substring(0, Maghrib.indexOf('('))}`;
     }
     else if((hour > MaghribH && hour < IshaH) || (hour === MaghribH && minute >= MaghribM) || ( hour === IshaH && minute < IshaM)){
         prayerH = IshaH, prayerM = IshaM;
-        prayer = `العشاء ${IshaM} : ${IshaH}`;    }
+        prayer = `العشاء ${Isha.substring(0, Isha.indexOf('('))}`;    }
         
     else if((hour > IshaH || hour < FajrH) || (hour === IshaH && minute >= IshaM) || ( hour === FajrH && minute < FajrM)){
         prayerH = FajrH, prayerM = FajrM, fajr = true;
-        prayer = `الفجر ${FajrM} : ${FajrH}`;
+        prayer = `الفجر ${Fajr.substring(0, Fajr.indexOf('('))}`;
     }
     --prayerM;
     if(prayerM < minute){
