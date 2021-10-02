@@ -3,37 +3,52 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Prayers Timings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <div class='times center'>
-        <table>
-            <thead>
-                <th>الفجر</th>
-                <th>الشروق</th>
-                <th>الظهر</th>
-                <th>العصر</th>
-                <th>المغرب</th>
-                <th>العشاء</th>
-            </thead>
-            <tr>
-                <td id="fajr"></td>
-                <td id="sunrise"></td>
-                <td id="dhuhr"></td>
-                <td id="asr"></td>
-                <td id="maghrib"></td>
-                <td id="isha"></td>
-            </tr>
-        </table>
-    </div>
-    <div class='clock' id='info'>
-        <h2>مواقيت الصلاة</h2>
-        <p id='now'></p>
-        <p id='prayer'></p>
-        <p id='time'></p>
+    <section>
+        <label class="switch">
+            <input type="checkbox" onchange="toggleLanguage(event)">
+            <span class="slider round"></span>
+        </label>
+    </section>
+    <div id="content">
+        <div class='times center'>
+            <table id="prayers-table">
+                <thead>
+                    <th></th>
+                    <th>الشروق</th>
+                    <th>الظهر</th>
+                    <th>العصر</th>
+                    <th>المغرب</th>
+                    <th>العشاء</th>
+                </thead>
+                <tr>
+                    <td id="fajr"></td>
+                    <td id="sunrise"></td>
+                    <td id="dhuhr"></td>
+                    <td id="asr"></td>
+                    <td id="maghrib"></td>
+                    <td id="isha"></td>
+                </tr>
+            </table>
+        </div>
+        <div class='clock' id='info'>
+            <h2 id="prayers-headline"></h2>
+            <p>
+                <span id="now-name"></span>
+                <span id="now-time"></span>
+            </p>
+            <p id="prayer-name-time"></p>
+            <p>
+                <span id="remaining-name"></span>
+                <span id='remaining-time'></span>
+            </p>
+        </div>
     </div>
     <div id='loading'><span></span></div>
     <script src="main.js"></script>

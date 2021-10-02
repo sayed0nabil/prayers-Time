@@ -1,0 +1,18 @@
+{
+    "ar": {
+        "prayers": ["الفجر", "الشروق", "الظهر", "العصر", "المغرب", "العشاء"],
+        "time": "الوقت",
+        "headline": "مواقيت الصلاة",
+        "remaining": "باقى",
+        "direction": "rtl",
+        "lang": "اللغة"
+    },
+    "en": {
+        "prayers": ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"],
+        "time": "Time",
+        "headline": "Prayer Timings",
+        "remaining": "Remaining",
+        "direction": "ltr",
+        "lang": "Language"
+    }
+}
